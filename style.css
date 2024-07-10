@@ -1,0 +1,531 @@
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1200px;
+}
+
+header {
+  white-space: nowrap;
+  padding-top: 30px;
+  width: 100%;
+  background-image: url('./assets/start-screen-gradient-background.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+#headerInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logoName {
+  font-family: Georgia;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35.2px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #F1CDB3;
+}
+
+.logoSubName {
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14.95px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+#links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.link a {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #CDCDCD;
+  transition: .2s;
+}
+
+.link a:hover {
+  color: #FAFAFA;
+}
+
+.selected {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.selected a {
+  color: #FAFAFA;
+  cursor: default;
+}
+
+#headerContent {
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#info {
+  display: flex;
+  max-width: 460px;
+  white-space: wrap;
+  flex-direction: column;
+  gap: 42px;
+  align-items: flex-start;
+}
+
+#notOnly {
+  width: 310px;
+  font-family: Georgia;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 57.2px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+#headerTxt {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #CDCDCD;
+}
+
+.CustomButton {
+  top: 270px;
+  padding: 15px 45px 15px 45px;
+  border-radius: 26px;
+  opacity: 0px;
+  background: #F1CDB3;
+  font-family: Georgia;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22.1px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #292929;
+  transition: .2s;
+}
+
+
+.CustomButton:hover {
+  background-color: #FDDCC4;
+}
+
+#mainDog {
+  width: 650px;
+}
+
+#aboutSectCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+#aboutInfo {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+h3 {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #545454;
+}
+
+#aboutInfo p {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #4C4C4C;
+}
+
+#friendsSection {
+  height: 877px;
+  background-color: #F6F6F6;
+}
+
+.swiper {
+  user-select: none;
+  width: 990px;
+  height: 435px;
+  margin-bottom: 60px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: min-content;
+  z-index: 0;
+  top: 56%;
+}
+
+.swiper-button-prev::after {
+  content: url('./assets/button_arrow.png');
+}
+
+.swiper-button-prev:hover::after {
+  content: url('./assets/button_arrow_hover.png');
+}
+
+.swiper-button-next::after {
+  content: url('./assets/button_arrow.png');
+  transform: rotate(180deg);
+}
+
+.swiper-button-next:hover::after {
+  content: url('./assets/button_arrow_hover.png');
+  transform: rotate(180deg);
+}
+
+.sliderCard {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 270px;
+  height: 435px;
+}
+
+.petsPhoto {
+  width: 270px;
+  height: 270px;
+}
+
+.petsName {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22.72px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.learnMoreBtn {
+  padding: 15px 45px 15px 45px;
+  gap: 10px;
+  border-radius: 26px;
+  border: 2px solid #F1CDB3;
+  opacity: 0px;
+  background-color: #fff;
+  font-family: Georgia;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22.1px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #292929;
+  transition: .2s;
+}
+
+.learnMoreBtn:hover {
+  background-color: #F1CDB3;
+}
+
+.titleWrap {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#friendsBtnwrap {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  width: 900px;
+  height: 500px;
+  position: relative;
+  top: calc(50% - 250px);
+  left: calc(50% - 450px);
+  border-radius: 10px;
+  background-color: #fff;
+  width: fit-content;
+  display: flex;
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  top: -50px;
+  left: 840px;
+}
+
+.close-button::after {
+  content: url('./assets/modal_close_button.png');
+}
+
+.close-button:hover,
+.close-button:focus {
+  content: url('./assets/modal_close_button-hover.png');
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-info {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 350px;
+  color: #000000;
+}
+
+#modal-photo {
+  border-bottom-left-radius: 10px;
+  height: 500px;
+}
+
+#modal-name {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+#modal-breed {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+#modal-description {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.modal-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.char {
+  font-family: Georgia;
+  font-size: 15px;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  height: 18px;
+  white-space: nowrap;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dot {
+  background-color: #F1CDB3;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.helpTools {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  align-items: center;
+}
+
+.helpTool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.helpTool span {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.margin {
+  margin-top: 55px;
+  padding-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F1CDB3;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+#donationSection {
+  background-color: #F6F6F6;
+}
+
+#donationContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.donationTitleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#donationInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#bankName {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #545454;
+}
+
+.donationNotificztion {
+  max-width: 380px;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #B2B2B2;
+}
+
+footer {
+  height: 350px;
+  background: linear-gradient(0deg, #211F20, #211F20), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+}
+
+.footerContainer {
+  padding-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.footerPart {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 294px;
+  width: 278px;
+}
+
+.footerTitleWrap h3 {
+  white-space: nowrap;
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.footerInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerInfoItem a {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #F1CDB3;
+}
