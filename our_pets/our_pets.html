@@ -13,36 +13,192 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
+  <header>
+    <div class="wrapper">
+      <div id="headerInfo">
+        <a href="#" class="logo">
+          <h1 class="logoName">Cozy House</h1>
+          <span class="logoSubName">Shelter for pets in Boston</span>
+        </a>
+        <nav>
+          <ul id="links">
+            <li class="link">
+              <a href="../index.html" rel="nofollow">About the shelter</a>
+            </li>
+            <li class="link selected">
+              <a href="#" rel="nofollow">Our pets</a>
+            </li>
+            <li class="link">
+              <a class="scroll-to" href="#helpSection" rel="nofollow">Help the shelter</a>
+            </li>
+            <li class="link">
+              <a class="scroll-to" href="footer" rel="nofollow">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="friendsSection">
       <div class="wrapper">
-        <div id="headerInfo">
-          <a href="#" class="logo">
-            <h1 class="logoName">Cozy House</h1>
-            <span class="logoSubName">Shelter for pets in Boston</span>
-          </a>
-          <nav>
-            <ul id="links">
-              <li class="link">
-                <a href="../index.html" rel="nofollow">About the shelter</a>
-              </li>
-              <li class="link selected">
-                <a href="#" rel="nofollow">Our pets</a>
-              </li>
-              <li class="link">
-                <a class="scroll-to" href="#helpSection" rel="nofollow">Help the shelter</a>
-              </li>
-              <li class="link">
-                <a class="scroll-to" href="footer" rel="nofollow">Contacts</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="titleWrap">
+          <h3>Our friends who</h3>
+          <h3>are looking for a house</h3>
+        </div>
+
+
+        <div class="paginationData">
+          <div class="sliderCard">
+            <img class="petsPhoto" src="../assets/pets-katrine.png" alt="petsPhoto">
+            <span class="petsName">Katrine</span>
+            <button class="learnMoreBtn" id="Katrine" data-name="Katrine" data-breed="Cat - British Shorthair"
+              data-description="Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations."
+              data-photo="../assets/pets-katrine.png">
+              Learn more
+            </button>
+          </div>
+
+          <div class="swiper-slide sliderCard">
+            <img class="petsPhoto" src="../assets/pets-jennifer.png" alt="petsPhoto">
+            <span class="petsName">Jennifer</span>
+            <button class="learnMoreBtn" id="Jennifer" data-name="Jennifer" data-breed="Dog - Labrador"
+              data-description="Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys."
+              data-photo="../assets/pets-jennifer.png">
+              Learn more
+            </button>
+          </div>
+
+          <div class="swiper-slide sliderCard">
+            <img class="petsPhoto" src="../assets/pets-woody.png" alt="petsPhoto">
+            <span class="petsName">Woody</span>
+            <button class="learnMoreBtn" id="Woody" data-name="Woody" data-breed="Dog - Golden Retriever"
+              data-description="Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him."
+              data-photo="../assets/pets-woody.png">
+              Learn more
+            </button>
+          </div>
+
+          <div class="swiper-slide sliderCard">
+            <img class="petsPhoto" src="../assets/pets-freddi.png" alt="petsPhoto">
+            <span class="petsName">Freddi</span>
+            <button class="learnMoreBtn" id="Freddi" data-name="Freddi" data-breed="Cat - British Shorthair"
+              data-description="Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home."
+              data-photo="../assets/pets-freddi.png">
+              Learn more
+            </button>
+          </div>
+
+          <div class="swiper-slide sliderCard">
+            <img class="petsPhoto" src="../assets/pets-sophia.png" alt="petsPhoto">
+            <span class="petsName">Sophia</span>
+            <button class="learnMoreBtn" id="Sophia" data-name="Sophia" data-breed="Dog - Shih tzu"
+              data-description="Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice."
+              data-photo="../assets/pets-sophia.png">
+              Learn more
+            </button>
+          </div>
+        </div>
+
+        <div style="display: none;" class="modal">
+          <div class="modal-content">
+            <img id="modal-photo" src="#" alt="photo">
+            <div class="modal-info">
+              <span class="close-button"></span>
+              <h2 id="modal-name">Name</h2>
+              <span id="modal-breed"></span>
+              <p id="modal-description"></p>
+              <ul>
+                <li class="char">
+                  <div class="dot"></div>
+                  <span>
+                    <b>Age: </b> 2 months
+                  </span>
+                </li>
+                <li class="char">
+                  <div class="dot"></div>
+                  <span>
+                    <b>Inoculations: </b> none
+                  </span>
+                </li>
+                <li class="char">
+                  <div class="dot"></div>
+                  <span>
+                    <b>Diseases: </b> none
+                  </span>
+                </li>
+                <li class="char">
+                  <div class="dot"></div>
+                  <span>
+                    <b>Parasites: </b> none
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-    <main></main>
-    <footer></footer>
-  </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <div class="footerContainer">
+        <div class="footerPart">
+          <div class="footerTitleWrap">
+            <h3>For questions</h3>
+            <h3>and suggestions</h3>
+          </div>
+          <div class="footerInfoItem">
+            <a href="mailto:email@shelter.com" rel="noopener noreferrer">
+              <img src="../assets/icon-mail.png" alt="icon">
+            </a>
+            <a href="mailto:email@shelter.com" rel="noopener noreferrer">
+              email@shelter.com
+            </a>
+          </div>
+          <div class="footerInfoItem">
+            <a href="tel:+136745677554" rel="noopener noreferrer"><img src="../assets/icon-phone.svg" alt="icon"></a>
+            <a href="tel:+136745677554" rel="noopener noreferrer">+13 674 567 75 54</a>
+          </div>
+        </div>
+
+        <div class="footerPart">
+          <div class="footerTitleWrap">
+            <h3>We are waiting</h3>
+            <h3>for your visit</h3>
+          </div>
+          <div class="footerInfoItem">
+            <a href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+USA/@42.358552,-71.0573066,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.358552!4d-71.0547263?authuser=0&entry=ttu"
+              target="_blank" rel="noopener noreferrer">
+              <img src="../assets/icon-marker.png" alt="icon">
+            </a>
+            <a href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+USA/@42.358552,-71.0573066,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.358552!4d-71.0547263?authuser=0&entry=ttu"
+              target="_blank" rel="noopener noreferrer">
+              <span style="white-space: nowrap;">1 Central Street, Boston </span>
+              <span style="white-space: nowrap;">(entrance from the store)</span>
+            </a>
+          </div>
+          <div class="footerInfoItem">
+            <a href="https://www.google.com/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+UK/@51.4202225,-0.2027269,17z/data=!3m1!4b1!4m6!3m5!1s0x487608baa7401b31:0x873a95ca58e122b2!8m2!3d51.4202192!4d-0.200152!16s%2Fg%2F11c1z48z8w?entry=ttu"
+              target="_blank" rel="noopener noreferrer">
+              <img src="../assets/icon-marker.png" alt="icon">
+            </a>
+            <a href="https://www.google.com/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+UK/@51.4202225,-0.2027269,17z/data=!3m1!4b1!4m6!3m5!1s0x487608baa7401b31:0x873a95ca58e122b2!8m2!3d51.4202192!4d-0.200152!16s%2Fg%2F11c1z48z8w?entry=ttu"
+              target="_blank" rel="noopener noreferrer">
+              <span>18 South Park, London </span>
+            </a>
+          </div>
+        </div>
+
+        <img src="../assets/footer-puppy.png" alt="footerDog">
+      </div>
+    </div>
+  </footer>
+
 
   <script src="./our_pets.js"></script>
 </body>
