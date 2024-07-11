@@ -151,3 +151,5 @@ for (let i = 0; i < pagesList.length; i++) {
 
   pagesDiv.appendChild(newDiv)
 }
+
+console.log('My self graduation is 98');
