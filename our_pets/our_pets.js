@@ -65,6 +65,47 @@ cards.forEach((card) => {
 const pagesList = document.querySelectorAll('.paginationData');
 const pagesDiv = document.querySelector('#pages');
 
+// pagination arrow buttons
+function moveHighlightButton(i) {
+  const pageButtons = document.querySelectorAll('.page')
+  pageButtons.forEach((pageButton) => {
+    pageButton.classList.remove('selectedPage')
+  })
+  pageButtons[i].classList.add('selectedPage')
+}
+
+
+document.querySelector('#stepLeft').onclick = () => {
+  pagesList.forEach((page, i) => {
+    if (page.classList.contains('shown')) {
+      if (i > 0) {
+        pagesList.forEach((page) => {
+          page.classList.remove('shown')
+        })
+        pagesList[i - 1].classList.add('shown')
+        moveHighlightButton(i - 1)
+      }
+    }
+  })
+}
+
+document.querySelector('#stepRight').onclick = () => {
+  for (let i = 0; i < pagesList.length; i++) {
+    const page = pagesList[i]
+    if (page.classList.contains('shown')) {
+      if (i < pagesList.length - 1) {
+        pagesList.forEach((page) => {
+          page.classList.remove('shown')
+        })
+        pagesList[i + 1].classList.add('shown')
+        moveHighlightButton(i + 1)
+        return
+      }
+    }
+  }
+}
+
+// pagination page buttons
 for (let i = 0; i < pagesList.length; i++) {
   const newDiv = document.createElement('div')
   newDiv.classList.add('page')
@@ -73,19 +114,11 @@ for (let i = 0; i < pagesList.length; i++) {
   if (i === 0) newDiv.classList.add('selectedPage')
 
   newDiv.onclick = () => {
-    const pageButtons = document.querySelectorAll('.page')
-
-    pageButtons.forEach((pageButton) => {
-      pageButton.classList.remove('selectedPage')
-    })
-
     pagesList.forEach((page) => {
       page.classList.remove('shown')
     })
-    
     pagesList[i].classList.add('shown')
-    pageButtons[i].classList.add('selectedPage')
+    moveHighlightButton(i)
   }
-
   pagesDiv.appendChild(newDiv)
 }
