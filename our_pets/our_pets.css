@@ -361,7 +361,7 @@ footer {
   color: #292929;
 }
 
-.selectedPage{
+.selectedPage {
   background-color: #F1CDB3;
 }
 
@@ -372,4 +372,15 @@ footer {
   gap: 20px;
   padding-top: 45px;
   padding-bottom: 100px;
+}
+
+.arrow {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  border: 2px solid #F1CDB3;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
