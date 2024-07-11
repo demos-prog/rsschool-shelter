@@ -103,7 +103,13 @@ document.querySelector('#stepRight').onclick = () => {
   }
 }
 
+document.querySelector('#scrollLeft').onclick = () => {
+  moveToPage(0)
+}
 
+document.querySelector('#scrollRight').onclick = () => {
+  moveToPage(pagesList.length - 1)
+}
 
 // pagination page buttons
 for (let i = 0; i < pagesList.length; i++) {
@@ -116,6 +122,6 @@ for (let i = 0; i < pagesList.length; i++) {
   newDiv.onclick = () => {
     moveToPage(i)
   }
-  
+
   pagesDiv.appendChild(newDiv)
 }
