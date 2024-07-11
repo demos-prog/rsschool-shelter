@@ -64,3 +64,5 @@ window.onclick = function (event) {
     body.style.overflow = "auto";
   }
 }
+
+console.log('My self graduation is 98');
