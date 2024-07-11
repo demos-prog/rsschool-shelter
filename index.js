@@ -65,4 +65,5 @@ window.onclick = function (event) {
   }
 }
 
+
 console.log('My self graduation is 98');
