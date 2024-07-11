@@ -64,8 +64,31 @@ cards.forEach((card) => {
 // pagination
 const pagesList = document.querySelectorAll('.paginationData');
 const pagesDiv = document.querySelector('#pages');
+const stepLeft = document.querySelector('#stepLeft');
+const stepRight = document.querySelector('#stepRight');
+const scrollLeft = document.querySelector('#scrollLeft')
+const scrollRight = document.querySelector('#scrollRight');
+
+function disableArrows(i) {
+  if (i === 0) {
+    stepLeft.classList.add('disabedArrow')
+    scrollLeft.classList.add('disabedArrow')
+  } else {
+    stepLeft.classList.remove('disabedArrow')
+    scrollLeft.classList.remove('disabedArrow')
+  }
+
+  if (i === pagesList.length - 1) {
+    stepRight.classList.add('disabedArrow')
+    scrollRight.classList.add('disabedArrow')
+  } else {
+    stepRight.classList.remove('disabedArrow')
+    scrollRight.classList.remove('disabedArrow')
+  }
+}
 
 function moveToPage(i) {
+  disableArrows(i)
   //switching pages
   pagesList.forEach((page) => {
     page.classList.remove('shown')
@@ -81,7 +104,7 @@ function moveToPage(i) {
 }
 
 
-document.querySelector('#stepLeft').onclick = () => {
+stepLeft.onclick = () => {
   pagesList.forEach((page, i) => {
     if (page.classList.contains('shown')) {
       if (i > 0) {
@@ -91,7 +114,7 @@ document.querySelector('#stepLeft').onclick = () => {
   })
 }
 
-document.querySelector('#stepRight').onclick = () => {
+stepRight.onclick = () => {
   for (let i = 0; i < pagesList.length; i++) {
     const page = pagesList[i]
     if (page.classList.contains('shown')) {
@@ -103,11 +126,11 @@ document.querySelector('#stepRight').onclick = () => {
   }
 }
 
-document.querySelector('#scrollLeft').onclick = () => {
+scrollLeft.onclick = () => {
   moveToPage(0)
 }
 
-document.querySelector('#scrollRight').onclick = () => {
+scrollRight.onclick = () => {
   moveToPage(pagesList.length - 1)
 }
 
@@ -117,7 +140,10 @@ for (let i = 0; i < pagesList.length; i++) {
   newDiv.classList.add('page')
   newDiv.innerText = i + 1
 
-  if (i === 0) newDiv.classList.add('selectedPage')
+  if (i === 0) {
+    newDiv.classList.add('selectedPage')
+    disableArrows(i)
+  }
 
   newDiv.onclick = () => {
     moveToPage(i)
