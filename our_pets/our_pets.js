@@ -65,8 +65,14 @@ cards.forEach((card) => {
 const pagesList = document.querySelectorAll('.paginationData');
 const pagesDiv = document.querySelector('#pages');
 
-// pagination arrow buttons
-function moveHighlightButton(i) {
+function moveToPage(i) {
+  //switching pages
+  pagesList.forEach((page) => {
+    page.classList.remove('shown')
+  })
+  pagesList[i].classList.add('shown')
+
+  // switching buttons
   const pageButtons = document.querySelectorAll('.page')
   pageButtons.forEach((pageButton) => {
     pageButton.classList.remove('selectedPage')
@@ -79,11 +85,7 @@ document.querySelector('#stepLeft').onclick = () => {
   pagesList.forEach((page, i) => {
     if (page.classList.contains('shown')) {
       if (i > 0) {
-        pagesList.forEach((page) => {
-          page.classList.remove('shown')
-        })
-        pagesList[i - 1].classList.add('shown')
-        moveHighlightButton(i - 1)
+        moveToPage(i - 1)
       }
     }
   })
@@ -94,16 +96,14 @@ document.querySelector('#stepRight').onclick = () => {
     const page = pagesList[i]
     if (page.classList.contains('shown')) {
       if (i < pagesList.length - 1) {
-        pagesList.forEach((page) => {
-          page.classList.remove('shown')
-        })
-        pagesList[i + 1].classList.add('shown')
-        moveHighlightButton(i + 1)
+        moveToPage(i + 1)
         return
       }
     }
   }
 }
+
+
 
 // pagination page buttons
 for (let i = 0; i < pagesList.length; i++) {
@@ -114,11 +114,8 @@ for (let i = 0; i < pagesList.length; i++) {
   if (i === 0) newDiv.classList.add('selectedPage')
 
   newDiv.onclick = () => {
-    pagesList.forEach((page) => {
-      page.classList.remove('shown')
-    })
-    pagesList[i].classList.add('shown')
-    moveHighlightButton(i)
+    moveToPage(i)
   }
+  
   pagesDiv.appendChild(newDiv)
 }
