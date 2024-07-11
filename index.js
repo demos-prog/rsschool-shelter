@@ -64,16 +64,3 @@ window.onclick = function (event) {
     body.style.overflow = "auto";
   }
 }
-
-// cards hovering
-const cards = document.querySelectorAll('.sliderCard')
-
-cards.forEach((card) => {
-  card.onmouseenter = function () {
-    this.querySelector('.learnMoreBtn').style.backgroundColor = '#F1CDB3';
-  }
-
-  card.onmouseleave = function () {
-    this.querySelector('.learnMoreBtn').style.backgroundColor = 'transparent';
-  }
-})

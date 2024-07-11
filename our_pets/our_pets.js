@@ -59,3 +59,33 @@ cards.forEach((card) => {
     this.querySelector('.learnMoreBtn').style.backgroundColor = 'transparent';
   }
 })
+
+
+// pagination
+const pagesList = document.querySelectorAll('.paginationData');
+const pagesDiv = document.querySelector('#pages');
+
+for (let i = 0; i < pagesList.length; i++) {
+  const newDiv = document.createElement('div')
+  newDiv.classList.add('page')
+  newDiv.innerText = i + 1
+
+  if (i === 0) newDiv.classList.add('selectedPage')
+
+  newDiv.onclick = () => {
+    const pageButtons = document.querySelectorAll('.page')
+
+    pageButtons.forEach((pageButton) => {
+      pageButton.classList.remove('selectedPage')
+    })
+
+    pagesList.forEach((page) => {
+      page.classList.remove('shown')
+    })
+    
+    pagesList[i].classList.add('shown')
+    pageButtons[i].classList.add('selectedPage')
+  }
+
+  pagesDiv.appendChild(newDiv)
+}
